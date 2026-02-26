@@ -9,7 +9,7 @@ local Window = Rayfield:CreateWindow({
    LoadingTitle = "Rayfield Interface Suite",
    LoadingSubtitle = "by Sirius",
    ShowText = "CORSA", -- for mobile users to unhide Rayfield, change if you'd like
-   Theme = "Default", -- Check https://docs.sirius.menu/rayfield/configuration/themes
+   Theme = "Amethyst", -- Check https://docs.sirius.menu/rayfield/configuration/themes
 
    ToggleUIKeybind = "K", -- The keybind to toggle the UI visibility (string like "K" or Enum.KeyCode)
 
@@ -38,4 +38,20 @@ local Window = Rayfield:CreateWindow({
       GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
       Key = {"xgec"} -- List of keys that the system will accept, can be RAW file links (pastebin, github, etc.) or simple strings ("hello", "key22")
    }
+})
+
+local Tab = Window:CreateTab("Main", 4483362458) -- Title, Image
+
+local Button = Main:CreateButton({
+   Name = "Chat Bypass",
+   Callback = function(loadstring(game:HttpGet("https://raw.githubusercontent.com/jodta/my-scripts/refs/heads/main/Fur%20Infection%2BOutbreak%20Chat%20Bypass"))())
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Button = Main:CreateButton({
+   Name = "Fur Hub",
+   Callback = function(loadstring(game:HttpGet("https://raw.githubusercontent.com/jodta/my-scripts/refs/heads/main/Fur%20Infection%20Outbreak%20V1.7"))())
+   -- The function that takes place when the button is pressed
+   end,
 })
